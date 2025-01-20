@@ -7,6 +7,5 @@
 
 <script setup>
   import { defineAsyncComponent } from 'vue';
-  // Impor Components Asynchronously
   const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'));
 </script>
