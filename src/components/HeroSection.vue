@@ -23,16 +23,14 @@
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500"
               >
-                Steven </span
+                Akshay </span
               >😁
             </h1>
           </div>
           <p
             class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            eius laboriosam ratione corporis tempore facilis, laborum, debitis
-            dolorem accusamus accusantium modi obcaecati?
+            Biochemist turned Software Engineer
           </p>
           <div
             class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0"

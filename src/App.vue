@@ -33,15 +33,11 @@
   const HeroSection = defineAsyncComponent(
     () => import('@/components/HeroSection.vue')
   );
-  const ServicesSection = defineAsyncComponent(
-    () => import('@/components/ServicesSection.vue')
-  );
+
   const AboutSection = defineAsyncComponent(
     () => import('@/components/AboutSection.vue')
   );
-  const TestimonialsSection = defineAsyncComponent(
-    () => import('@/components/TestimonialsSection.vue')
-  );
+
   const LatestProjSection = defineAsyncComponent(
     () => import('@/components/LatestProjSection.vue')
   );
