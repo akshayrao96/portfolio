@@ -7,12 +7,10 @@
         <div>
           <NavBar />
           <HeroSection />
-          <ServicesSection />
           <AboutSection />
           <ExperienceAndSkills />
           <LatestProjSection />
           <ContactSection />
-          <TestimonialsSection />
           <Footer />
           <BackToTop />
         </div>
