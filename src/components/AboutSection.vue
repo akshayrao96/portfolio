@@ -9,7 +9,7 @@
       class="md:grid md:grid-cols-2 gap-8 items-center py-6 px-4 xl:gap-16 sm:py-12 xl:px-16 z-1"
     >
       <div data-aos="flip-right">
-        <h2 class="text-5xl font-bold text-white text-left mb-6">
+        <h2 class="text-6xl font-bold text-white text-center mb-6">
           My Education
         </h2>
         <div class="space-y-8 py-6">
