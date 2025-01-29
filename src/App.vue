@@ -27,31 +27,27 @@
 <script setup>
   import { defineAsyncComponent } from 'vue';
   //Import Components Asynchronously
-  const NavBar = defineAsyncComponent(
-    () => import('./src/components/NavBar.vue')
-  );
+  const NavBar = defineAsyncComponent(() => import('./components/NavBar.vue'));
   const HeroSection = defineAsyncComponent(
-    () => import('./src/components/HeroSection.vue')
+    () => import('./components/HeroSection.vue')
   );
 
   const AboutSection = defineAsyncComponent(
-    () => import('./src/components/AboutSection.vue')
+    () => import('./components/AboutSection.vue')
   );
 
   const LatestProjSection = defineAsyncComponent(
-    () => import('./src/components/LatestProjSection.vue')
+    () => import('./components/LatestProjSection.vue')
   );
   const ExperienceAndSkills = defineAsyncComponent(
-    () => import('./src/components/ExperienceAndSkills.vue')
+    () => import('./components/ExperienceAndSkills.vue')
   );
   const ContactSection = defineAsyncComponent(
-    () => import('./src/components/ContactSection.vue')
+    () => import('./components/ContactSection.vue')
   );
-  const Footer = defineAsyncComponent(
-    () => import('./src/components/Footer.vue')
-  );
+  const Footer = defineAsyncComponent(() => import('./components/Footer.vue'));
   const BackToTop = defineAsyncComponent(
-    () => import('./src/components/BackToTop.vue')
+    () => import('./components/BackToTop.vue')
   );
   import loadingSpinner from './components/LoadingSpinner.vue';
 </script>
