@@ -45,15 +45,21 @@
           More
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-          >About</span
+            >About</span
           >
           Me
         </h2>
         <p class="text-xl lg:text-2xl mt-4 mb-6 leading-relaxed">
-          Originally from Singapore and now based in Seattle, I’m passionate about learning and embracing new experiences. My hobbies include listening to podcasts, watching sports, staying active, and exploring cozy cafes.
+          Originally from Singapore and now based in Seattle, I'm passionate
+          about learning and embracing new experiences. My hobbies include
+          listening to podcasts, reading biographies, watching sports, staying
+          active, and exploring unique cafes.
         </p>
         <p class="text-xl lg:text-2xl leading-relaxed">
-          I find joy in meeting people to hear their unique stories and traveling to immerse myself in different cultures. These experiences have shaped my perspective and fueled my passion for continuous growth.
+          I find joy in meeting people to hear their unique stories and
+          traveling to immerse myself in different cultures. These experiences
+          have shaped my perspective and fueled my passion for continuous
+          growth.
         </p>
       </div>
     </div>
@@ -77,5 +83,3 @@
     },
   ]);
 </script>
-
-
