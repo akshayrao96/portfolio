@@ -23,8 +23,8 @@
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500"
               >
-                Akshay </span
-              >😁
+                Akshay
+              </span>
             </h1>
           </div>
           <p
@@ -46,7 +46,7 @@
               >
             </button>
             <button
-              class="border border-primary px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center"
+              class="border border-primary px-6 md:px- py-3 rounded-full relative group w-full sm:w-max flex justify-center"
             >
               <div
                 class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative"
@@ -98,7 +98,7 @@
               class="absolute z-0 top-1/2 -translate-y-1/2 w-5/6 right-0 h-[calc(80%+20px)] bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl"
             ></div>
             <div
-              class="absolute h-full z-10 p-4 -translate-y-1/2 top-1/2 right-0 rounded-full shadow-lg border-4 border-primary"
+              class="absolute h-full z-10 p-4 -translate-y-1/2 top-1/2 right-4 rounded-full shadow-lg border-4 border-primary"
             >
               <img
                 src="@/assets/top_picture.jpg"

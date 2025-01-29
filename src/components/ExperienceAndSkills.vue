@@ -95,14 +95,14 @@
   const Experinces = ref([
     {
       id: 1,
-      role: 'Software Engineer',
-      company: 'Microsoft',
-      date: 'Mar 2023 - September 2024',
+      role: 'Software Engineer Intern',
+      company: 'JustPerform',
+      date: 'May 2024 - September 2024',
     },
     {
       id: 2,
-      role: 'Frontend Developer',
-      company: 'Spotify',
+      role: 'Software Developer',
+      company: 'Yara International',
       date: 'Mar 2022 - September 2023',
     },
   ]);
