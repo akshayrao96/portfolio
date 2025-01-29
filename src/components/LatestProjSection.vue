@@ -29,28 +29,12 @@
             <div
               class="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500"
             >
+              <!-- Left Button: GitHub Source Code -->
               <a
                 class="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-                :href="project.webURL"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  data-slot="icon"
-                  class="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group-hover/link:text-white"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
-                  ></path></svg></a
-              ><a
-                class="h-14 w-14 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
                 :href="project.gitURL"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,11 +62,19 @@
           <div
             class="text-white rounded-b-xl mt-3 bg-[#111a3e] shadow-lg border border-[#1f1641] py-6 px-4"
           >
-            <h3 class="text-lg font-semibold uppercase lg:text-xl">
-              {{ project.title }}
+            <!-- Centered, Clickable Subheading -->
+            <h3 class="text-lg font-semibold uppercase lg:text-xl text-center">
+              <a
+                :href="project.gitURL"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:text-primary transition-all duration-300"
+              >
+                {{ project.title }}
+              </a>
             </h3>
-            <p class="text-[#ADB7BE]">{{ project.description }}</p>
-            <div class="flex flex-wrap p-2.5">
+            <p class="text-[#ADB7BE] text-center">{{ project.description }}</p>
+            <div class="flex flex-wrap justify-center p-2.5">
               <div
                 v-for="technology in project.technologies"
                 :key="technology"
@@ -94,7 +86,7 @@
                   -webkit-backdrop-filter: blur(9px);
                 "
               >
-                <p class="px-1 py-2">{{ technology }}</p>
+                <p class="px-3 py-2">{{ technology }}</p>
               </div>
             </div>
           </div>
@@ -103,75 +95,76 @@
     </div>
   </section>
 </template>
+
 <script setup>
   import { ref, computed } from 'vue';
 
   const Projects = ref([
     {
       id: 1,
-      category: 'web development',
-      image: 'src/assets/project.png',
-      title: 'project 1',
+      category: 'DevOps & Automation',
+      image: 'src/assets/projects/id1.png',
+      title: 'CI Engine',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A lightweight CI/CD pipeline service for seamless developer workflow integration. Automate builds, tests, and deployments with CLI tools and Docker support.',
+      technologies: ['Python', 'CLI Tools', 'Docker', 'Git', 'MongoDB'],
+      gitURL: 'https://github.com/akshayrao96/ci-engine',
     },
     {
       id: 2,
-      category: 'Mobile App',
-      image: 'src/assets/mobile.jpg',
-      title: 'project 1',
+      category: 'Full Stack Development',
+      image: 'src/assets/projects/id2.jpg',
+      title: 'Password Manager Vault',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A secure, full-stack password manager with encrypted storage. Built with React and Node.js, it supports user authentication and role-based access. Currently in progress.',
+      technologies: ['JavaScript', 'NodeJS', 'React', 'HTML', 'CSS', 'MongoDB'],
+      gitURL: 'https://github.com/akshayrao96/password-manager-vault',
     },
     {
       id: 3,
-      category: 'web development',
-      image: 'src/assets/project.png',
-      title: 'project 1',
+      category: 'Distributed Systems',
+      image: 'src/assets/projects/id3.jpg',
+      title: 'Distributed Album Store',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A scalable album store built on AWS, integrating dynamic server frameworks, load balancing, and RabbitMQ for high throughput and reliability.',
+      technologies: ['Java', 'Servlets', 'DynamoDB', 'MySQL', 'AWS'],
+      gitURL: 'https://github.com/akshayrao96/distributed-album-store',
     },
     {
       id: 4,
-      category: 'Mobile App',
-      image: 'src/assets/mobile.jpg',
-      title: 'project 1',
+      category: 'Microservices',
+      image: 'src/assets/projects/id4.jpg',
+      title: 'Katallage',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A dynamic e-commerce platform enabling users to buy and offer freelance services. Built with microservices architecture and Kubernetes deployment. Currently in progress.',
+      technologies: [
+        'TypeScript',
+        'RabbitMQ',
+        'Kubernetes',
+        'Grafana',
+        'Prometheus',
+      ],
+      gitURL: 'https://github.com/akshayrao96/katallage',
     },
     {
       id: 5,
-      category: 'web development',
-      image: 'src/assets/project.png',
-      title: 'project 1',
+      category: 'System Programming',
+      image: 'src/assets/projects/id5.png',
+      title: 'Task Scheduler',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A Linux kernel-inspired task scheduler simulator, implementing priority-based scheduling and resource allocation for process management. Analyzes metrics and tradeoffs for different scheduling algorithms.',
+      technologies: ['C++'],
+      gitURL: 'https://github.com/yourrepo/task-scheduler',
     },
     {
       id: 6,
-      category: 'Mobile App',
-      image: 'src/assets/mobile.jpg',
-      title: 'project 1',
+      category: 'Networking & Communication',
+      image: 'src/assets/projects/id6.jpg',
+      title: 'Chat Program',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic tenetur quasi ipsam labore sapiente, accusamus necessitatibus laboriosam non voluptas inventore deserunt dolore modi ex, praesentium at provident nihil magni ratione!',
-      technologies: ['vue.js 3', 'vuex', 'Express'],
-      gitURL: '',
-      webURL: '',
+        'A Python-based chat application to reinforce networking concepts like TCP/IP, multithreading, and web sockets. Includes a GUI for enhanced usability.',
+      technologies: ['Python', 'TCP/IP', 'Multithreading'],
+      gitURL: 'https://github.com/akshayrao96/chat-program',
     },
   ]);
 
@@ -182,8 +175,7 @@
     }
     return Projects.value.filter(
       project =>
-        project.category.toLocaleLowerCase() ===
-        selectedCategory.value.toLocaleLowerCase()
+        project.category.toLowerCase() === selectedCategory.value.toLowerCase()
     );
   });
 </script>
