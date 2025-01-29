@@ -32,7 +32,7 @@
             rel="noopener noreferrer"
             class="block h-52 md:h-[24rem] rounded-t-xl relative group transition-all duration-300 hover:scale-105"
             :style="{
-              backgroundImage: 'url(' + project.image + ')',
+              backgroundImage: 'url(' + getImagePath(project.image) + ')',
               backgroundSize: 'cover',
             }"
           >
@@ -100,6 +100,10 @@
 <script setup>
   import { ref, computed } from 'vue';
 
+  const getImagePath = imageName => {
+    return new URL(`../assets/projects/${imageName}`, import.meta.url).href;
+  };
+
   const categories = ref([
     'Distributed Systems',
     'DevOps & Automation',
@@ -114,7 +118,7 @@
     {
       id: 1,
       categories: ['Systems Programming'],
-      image: 'src/assets/projects/id1.png',
+      image: 'id1.png',
       title: 'CI Engine',
       description:
         'A robust CI/CD service designed to streamline developer workflow integration. This system automates build, test, and deployment pipelines, ensuring seamless code delivery.',
@@ -124,7 +128,7 @@
     {
       id: 2,
       categories: ['Full-Stack Development'],
-      image: 'src/assets/projects/id2.jpg',
+      image: 'id2.jpg',
       title: 'Password Manager Vault',
       description:
         'A password manager for storing passwords securely. Includes a full-stack application that manages users, ownership rights, and password encryption.',
@@ -134,7 +138,7 @@
     {
       id: 3,
       categories: ['Distributed Systems'],
-      image: 'src/assets/projects/id3.jpg',
+      image: 'id3.jpg',
       title: 'Distributed Album Store',
       description:
         'Client and server system for an optimized distributed architecture. Hosted on AWS, scales via dynamic frameworks, load balancing, and RabbitMQ integration for high throughput.',
@@ -148,7 +152,7 @@
         'Distributed Systems',
         'Full-Stack Development',
       ],
-      image: 'src/assets/projects/id4.jpg',
+      image: 'id4.jpg',
       title: 'Katallage',
       description:
         'An e-commerce platform where users can buy or sell services. Uses event-based microservices architecture using Kubernetes as orchestration management, RabbitMQ, and observability tools.',
@@ -164,7 +168,7 @@
     {
       id: 5,
       categories: ['Systems Programming'],
-      image: 'src/assets/projects/id5.png',
+      image: 'id5.png',
       title: 'Task Scheduler',
       description:
         'A simulation of a Linux-based task scheduler, implementing multiple scheduling algorithms and resource allocation methods. Analyzes metrics and tradeoffs between algorithms.',
@@ -174,7 +178,7 @@
     {
       id: 6,
       categories: ['Computer Networking'],
-      image: 'src/assets/projects/id6.jpg',
+      image: 'id6.jpg',
       title: 'Chat Program',
       description:
         'A Python-based chat application for learning networking fundamentals (TCP/IP, multithreading, web sockets). Includes a GUI for an enhanced user experience.',
