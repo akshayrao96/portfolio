@@ -169,7 +169,7 @@
       description:
         'A simulation of a Linux-based task scheduler, implementing multiple scheduling algorithms and resource allocation methods. Analyzes metrics and tradeoffs between algorithms.',
       technologies: ['C++'],
-      gitURL: 'https://github.com/yourrepo/task-scheduler',
+      gitURL: 'https://github.com/akshayrao96/task-scheduler',
     },
     {
       id: 6,

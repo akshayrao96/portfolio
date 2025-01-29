@@ -7,83 +7,58 @@
       class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8"
       data-aos="zoom-in-up"
     >
+      <!-- Left Side: Contact Information -->
       <div>
         <p class="text-[#adb7be]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta alias
-          quibusdam officia at, a quis cumque ea aperiam omnis minima quam. Modi
-          necessitatibus odit corporis at dolorem quae iusto aliquam? Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Nobis, porro!
+          I'm always excited to connect with fellow developers, engineers, and
+          tech enthusiasts! Whether it's discussing software, open-source
+          contributions, or new opportunities, feel free to reach out via email
+          or connect on LinkedIn and GitHub.
         </p>
         <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
+          <!-- Email -->
           <div class="flex mb-10 items-center">
             <div
-              class="p-2"
-              style="
-                background: #111a3e;
-                width: 50px;
-                height: 46px;
-                display: flex;
-                justify-content: center;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 1px solid#111a3e;
-                backdrop-filter: blur(9px);
-                -webkit-backdrop-filter: blur(9px);
-              "
+              class="p-2 bg-[#111a3e] w-[50px] h-[46px] flex justify-center rounded-full overflow-hidden border border-[#111a3e] backdrop-blur"
             >
               <img
                 src="https://img.icons8.com/metro/50/ffffff/new-post.png"
-                alt="new-post"
+                alt="email"
                 class="w-6"
               />
             </div>
             <div class="ml-5 text-white">
               <h4>Email</h4>
-              <p>xxxxxxx@gmail.com</p>
+              <p>akshayrao196@gmail.com</p>
             </div>
           </div>
+          <!-- GitHub -->
           <div class="flex mb-10 items-center">
             <div
-              class="p-2"
-              style="
-                background: #111a3e;
-                width: 50px;
-                height: 46px;
-                display: flex;
-                justify-content: center;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 1px solid#111a3e;
-                backdrop-filter: blur(9px);
-                -webkit-backdrop-filter: blur(9px);
-              "
+              class="p-2 bg-[#111a3e] w-[50px] h-[46px] flex justify-center rounded-full overflow-hidden border border-[#111a3e] backdrop-blur"
             >
               <img
-                src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
-                alt="phone"
+                src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
+                alt="github"
                 class="w-6"
               />
             </div>
             <div class="ml-5 text-white">
-              <h4>Phone</h4>
-              <p>+xxxxxxxxxx</p>
+              <h4>GitHub</h4>
+              <p>
+                <a
+                  href="https://github.com/akshayrao96"
+                  target="_blank"
+                  class="text-primary hover:underline"
+                  >github.com/akshayrao96</a
+                >
+              </p>
             </div>
           </div>
+          <!-- LinkedIn -->
           <div class="flex mb-10 items-center">
             <div
-              class="p-2"
-              style="
-                background: #111a3e;
-                width: 50px;
-                height: 46px;
-                display: flex;
-                justify-content: center;
-                border-radius: 50%;
-                overflow: hidden;
-                border: 1px solid#111a3e;
-                backdrop-filter: blur(9px);
-                -webkit-backdrop-filter: blur(9px);
-              "
+              class="p-2 bg-[#111a3e] w-[50px] h-[46px] flex justify-center rounded-full overflow-hidden border border-[#111a3e] backdrop-blur"
             >
               <img
                 src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
@@ -93,34 +68,39 @@
             </div>
             <div class="ml-5 text-white">
               <h4>LinkedIn</h4>
-              <p>wwww.LinkedIn.com</p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/akshay-rao-bhamidipati/"
+                  target="_blank"
+                  class="text-primary hover:underline"
+                  >linkedin.com/in/akshay-rao-bhamidipati</a
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Right Side: Email Form -->
       <div
-        style="
-          background: #111a3e;
-          width: 100%;
-          height: 100%;
-          border-radius: 20px;
-          overflow: hidden;
-          border: 1px solid #111a3e;
-          backdrop-filter: blur(9px);
-          -webkit-backdrop-filter: blur(9px);
-        "
+        class="bg-[#111a3e] w-full h-full rounded-xl overflow-hidden border border-[#111a3e] backdrop-blur p-6"
       >
-        <form class="flex flex-col p-2" data-aos="zoom-in-up">
+        <form
+          @submit.prevent="sendEmail"
+          class="flex flex-col"
+          data-aos="zoom-in-up"
+        >
           <div class="mb-6">
             <label for="email" class="text-white block mb-2 text-sm font-medium"
-              >email</label
+              >Email</label
             >
             <input
+              v-model="form.email"
               type="email"
               id="email"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="email@gmail.com"
-              name="email"
+              class="bg-[#111827] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="your-email@gmail.com"
+              required
             />
           </div>
           <div class="mb-6">
@@ -130,11 +110,12 @@
               >Subject</label
             >
             <input
-              type="subject"
+              v-model="form.subject"
+              type="text"
               id="subject"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="subject"
-              name="subject"
+              class="bg-[#111827] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Subject"
+              required
             />
           </div>
           <div class="mb-6">
@@ -144,23 +125,73 @@
               >Message</label
             >
             <textarea
-              id="Message"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Let's talk about ... "
-              name="Message"
+              v-model="form.message"
+              id="message"
+              class="bg-[#111827] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Let's talk about..."
+              required
             ></textarea>
           </div>
           <button
-            class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent"
+            type="submit"
+            class="w-full px-6 py-3 rounded-full text-white bg-primary border-2 border-transparent"
           >
             Send Message
           </button>
+          <!-- Success/Error Message -->
+          <p
+            v-if="statusMessage"
+            class="mt-4 text-center font-medium"
+            :class="statusClass"
+          >
+            {{ statusMessage }}
+          </p>
         </form>
       </div>
-      <div
-        class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 -translate-1/2"
-      ></div>
     </div>
   </section>
 </template>
-<script></script>
+
+<script setup>
+  import { ref } from 'vue';
+  import emailjs from 'emailjs-com';
+
+  const form = ref({
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const statusMessage = ref('');
+  const statusClass = ref('');
+
+  const sendEmail = () => {
+    emailjs
+      .send(
+        'service_pw7intd', // Replace with your EmailJS service ID
+        'template_m1o6t3q', // Replace with your EmailJS template ID
+        {
+          email: form.value.email,
+          subject: form.value.subject,
+          message: form.value.message,
+        },
+        'WChYuM07tghr-vnBA' // Replace with your EmailJS user ID
+      )
+      .then(
+        response => {
+          statusMessage.value = '✅ Message sent successfully!';
+          statusClass.value = 'text-green-500';
+          setTimeout(() => (statusMessage.value = ''), 5000);
+          form.value.email = '';
+          form.value.subject = '';
+          form.value.message = '';
+        },
+        error => {
+          console.error(error);
+          statusMessage.value =
+            '❌ Error sending message. Please use a valid email.';
+          statusClass.value = 'text-red-500';
+        }
+      );
+  };
+</script>
