@@ -16,21 +16,29 @@
           My
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-            >Skills</span
           >
+            Skills
+          </span>
         </h2>
-        <div class="mt-8" v-for="skill in Skills" :key="skill.id">
-          <div class="flex items-end justify-between" data-aos="fade-right">
-            <h4 class="font-semibold uppercase text-white">
-              {{ skill.name }}
-            </h4>
-            <h3 class="text-2xl font-bold text-white">{{ skill.width }}</h3>
-          </div>
-          <div class="mt-2 h-1 w-full bg-[#131d30] rounded-full">
-            <div
-              class="h-1 rounded-full bg-primary"
-              :style="`width :${skill.width}`"
-            ></div>
+
+        <div class="mt-8" v-for="domain in SkillDomains" :key="domain.id">
+          <!-- Domain Name -->
+          <h4
+            class="font-semibold uppercase text-white text-lg"
+            data-aos="fade-right"
+          >
+            {{ domain.name }}
+          </h4>
+
+          <!-- Tech Stack List with Animation & Balanced Size -->
+          <div class="flex flex-wrap mt-3 gap-3">
+            <span
+              v-for="tech in domain.tech"
+              :key="tech"
+              class="px-5 py-2.5 border-2 border-[#FFD700] rounded-xl text-white text-base font-medium shadow-lg scale-95 animate-fadeIn transition-all duration-300 ease-in-out hover:scale-105"
+            >
+              {{ tech }}
+            </span>
           </div>
         </div>
       </div>
@@ -38,7 +46,7 @@
         <h2
           class="text-4xl font-bold text-white text-left mb-8 md:text-center md:mt-0 mt-8"
         >
-          My Experiences
+          Recent Career Experiences
         </h2>
         <div class="space-y-8 py-8" data-aos="fade-left">
           <div
@@ -48,8 +56,9 @@
           >
             <div class="w-1/4">
               <img
-                src="https://img.icons8.com/ios-filled/100/ffffff/lawyer.png"
-                alt="lawyer"
+                :src="getImagePath(element.image)"
+                :alt="element.company"
+                class="w-28 h-28 max-w-full object-contain border-1"
               />
             </div>
             <div class="w-3/4 pl-4">
@@ -58,8 +67,8 @@
               >
                 {{ element.role }}
               </h3>
-              <p class="text-white">{{ element.company }}</p>
-              <p class="text-white">{{ element.date }}</p>
+              <p class="text-white text-lg">{{ element.company }}</p>
+              <p class="text-white text-lg">{{ element.date }}</p>
             </div>
           </div>
         </div>
@@ -69,26 +78,36 @@
 </template>
 <script setup>
   import { ref } from 'vue';
-  const Skills = ref([
+
+  const getImagePath = imageName => {
+    return new URL(`../assets/${imageName}`, import.meta.url).href;
+  };
+
+  const SkillDomains = ref([
     {
       id: 1,
-      name: 'HTmL & CSS',
-      width: '85%',
+      name: 'Frontend Development',
+      tech: ['React', 'React Native', 'Vue.js'],
     },
     {
       id: 2,
-      name: 'Python',
-      width: '70%',
+      name: 'Backend Development',
+      tech: ['Python', 'Java', 'JavaScript', 'TypeScript', 'Golang'],
     },
     {
       id: 3,
-      name: 'JavaScript',
-      width: '98%',
+      name: 'Server-Side Frameworks',
+      tech: ['Flask', 'FastAPI', 'Spring', 'Servlets', 'Node.js', 'Gin'],
     },
     {
       id: 4,
-      name: 'figma',
-      width: '91%',
+      name: 'Databases & Data Management',
+      tech: ['PostgreSQL', 'MySQL', 'MongoDB', 'DynamoDB', 'Redis'],
+    },
+    {
+      id: 5,
+      name: 'DevOps, Cloud & Infrastructure',
+      tech: ['Docker', 'Kubernetes', 'CircleCI', 'YAML'],
     },
   ]);
 
@@ -98,12 +117,22 @@
       role: 'Software Engineer Intern',
       company: 'JustPerform',
       date: 'May 2024 - September 2024',
+      image: 'justperform_logo.jpg',
     },
     {
       id: 2,
       role: 'Software Developer',
       company: 'Yara International',
-      date: 'Mar 2022 - September 2023',
+      date: 'March 2022 - September 2023',
+      image: 'yara_logo.png',
+    },
+
+    {
+      id: 3,
+      role: 'Teaching Assistant',
+      company: 'Northeastern University',
+      date: 'January 2023 - December 2024',
+      image: 'neu_husky.png',
     },
   ]);
 </script>
