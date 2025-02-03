@@ -80,12 +80,12 @@
                   <div class="download-loader text-white hidden"></div>
                 </div>
                 <a
-                  href="/resume.pdf"
-                  download="Resume.pdf"
+                  :href="ResumePDF"
+                  download="Akshay_Rao_Resume.pdf"
                   class="pl-2 text-primary"
                 >
-                  Resume</a
-                >
+                  Resume
+                </a>
               </div>
             </button>
           </div>
@@ -118,5 +118,6 @@
 <script setup>
   import AOS from 'aos';
   import 'aos/dist/aos.css';
+  import ResumePDF from '@/assets/Resume.pdf';
   AOS.init();
 </script>
