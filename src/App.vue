@@ -4,6 +4,7 @@
     <Suspense>
       <template #default>
         <!-- Wrap all Components inside a single root element -->
+        <!-- Services might not be required -->
         <div>
           <NavBar />
           <HeroSection />
