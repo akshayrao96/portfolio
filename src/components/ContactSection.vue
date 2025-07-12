@@ -39,7 +39,7 @@
             >
               <img
                 src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
-                alt="github"
+                alt="Github"
                 class="w-6"
               />
             </div>
@@ -55,6 +55,7 @@
               </p>
             </div>
           </div>
+
           <!-- LinkedIn -->
           <div class="flex mb-10 items-center">
             <div
@@ -62,7 +63,7 @@
             >
               <img
                 src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"
-                alt="linkedin"
+                alt="Linkedin"
                 class="w-6"
               />
             </div>
@@ -74,6 +75,29 @@
                   target="_blank"
                   class="text-primary hover:underline"
                   >linkedin.com/in/akshay-rao-bhamidipati</a
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Source Code -->
+          <div class="flex mb-10 items-center">
+            <div
+              class="p-2 bg-[#111a3e] w-[50px] h-[46px] flex justify-center rounded-full overflow-hidden border border-[#111a3e] backdrop-blur"
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/50/ffffff/github.png"
+                alt="Portfolio source code"
+                class="w-6"
+              />
+            </div>
+            <div class="ml-5 text-white">
+              <h4>Github Source Code</h4>
+              <p>
+                <a
+                  href="https://github.com/akshayrao96/portfolio"
+                  target="_blank"
+                  class="text-primary hover:underline"
+                  >github.com/akshayrao96/portfolio</a
                 >
               </p>
             </div>
