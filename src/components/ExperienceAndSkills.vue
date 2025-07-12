@@ -114,21 +114,35 @@
   const Experinces = ref([
     {
       id: 1,
-      role: 'Software Engineer Intern',
-      company: 'JustPerform',
-      date: 'May 2024 - September 2024',
-      image: 'justperform_logo.jpg',
+      role: 'Software Dev Engineer',
+      company: 'Amazon',
+      date: 'July 2025 - Current',
+      image: 'aws_logo.png',
     },
     {
       id: 2,
+      role: 'Devops Engineer',
+      company: 'Crely Inc.',
+      date: 'February 2025 - June 2025',
+      image: 'crely_inc_logo.jpg',
+    },
+    {
+      id: 3,
+      role: 'Software Engineer Intern',
+      company: 'Insightsoftware - JustPerform',
+      date: 'May 2024 - September 2024',
+      image: 'insightsoftware_logo.jpg',
+    },
+    {
+      id: 4,
       role: 'Software Developer',
       company: 'Yara International',
-      date: 'March 2022 - September 2023',
+      date: 'February 2022 - August 2022',
       image: 'yara_logo.png',
     },
 
     {
-      id: 3,
+      id: 5,
       role: 'Teaching Assistant',
       company: 'Northeastern University',
       date: 'January 2023 - December 2024',
